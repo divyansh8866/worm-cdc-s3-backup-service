@@ -11,19 +11,13 @@ except Exception as e:
 # Load environment variables from .env file
 load_dotenv()
 
-# AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-# AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-
-# S3_BUCKET_NAME = os.environ['S3_BUCKET_NAME']
-# FOLDER_PATHS = os.environ['FOLDER_PATHS']
 HISTORICAL_DATA = os.environ['HISTORICAL_DATA']
-
 FOLDER_PATHS = os.getenv("FOLDER_PATHS").split(',')
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME")
 HISTORICAL_DATA = os.getenv("HISTORICAL_DATA")
-AWS_SESSION_TOKEN = ''
+AWS_SESSION_TOKEN = '' # Its ok to keep blank
 root_dir = ""
 
 
