@@ -1,0 +1,12 @@
+version: '3'
+services:
+  worm-cdc-s3-backup-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /srv/dev-disk-by-uuid-12ea95b7-a900-4376-ba45-9b3f146c13db/divyansh_doc:/backup_service/divyansh_doc
+    environment:
+      - HISTORICAL_DATA=False
+    command: ["python", "main.py"]
+    restart: always
